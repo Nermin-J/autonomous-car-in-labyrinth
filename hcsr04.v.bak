@@ -1,0 +1,54 @@
+module hcsr04
+(
+	input  				clk,
+	input  				echoPin,				//echo pin ultrasoničnog senzora
+	output reg 			trigPin,				//triger pin senzora
+	output wire [20:0] udaljenost1, 		//udaljenost izracunata na osnovu izmjerenog vremena trajanja impulsa na echo pinu 
+	output reg 			M_end					//varijabla kojom se vrši "dojava" glavnom modulu da preuzme izračunatu vrijednost 
+													//udaljenosti (tranzicija iz 0 u 1)
+);
+
+//brzina zvuka = 331.4 + 0.6*temperatura 
+//counter_1cm = (2*0.01 / brzina zvuka) * 50 000 000
+reg [25:0] 	counter			 =    0; //brojac za mjerenje vremena trajanja HIGH(LOW) level na triger pinu 
+reg [20:0]	echoHighCounter =    0;	//brojac za mjerenje trajanja HIGH level-a na echo pinu (daje informaciju o udaljenosti) 	
+reg [20:0] 	counter_1cm		 =   2900;	//sirina impulsa na echo pinu ukoliko je izmjerenja udaljenost 1cm
+reg [20:0] udaljenost;
+
+
+initial begin
+	M_end   <= 0;
+	trigPin <= 0;
+end
+
+always@(posedge clk) 
+begin		
+	counter = counter + 1;
+	if(counter <= 500)
+		trigPin <= 1;
+	else
+		trigPin <= 0;
+	
+	if(echoPin) 
+		echoHighCounter <= echoHighCounter + 1;
+	
+	else 
+	begin
+		if(echoHighCounter!=0)
+		begin 
+			udaljenost = echoHighCounter;
+			echoHighCounter <= 0;
+		   if(udaljenost >= 5*counter_1cm && udaljenost <= 180*counter_1cm) M_end = 1;
+			else M_end = 0;
+		end
+	end
+	
+	if(counter == 3000500) 
+	begin
+		counter = 0;
+		M_end <= 0;
+	end
+end
+
+assign udaljenost1 = udaljenost;
+endmodule 

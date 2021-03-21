@@ -1,0 +1,149 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -8.262
+TNS   : -1803.564
+
+Type  : Slow 1200mV 85C Model Setup 'hcsr04:UltrasonicM|M_end'
+Slack : -2.878
+TNS   : -63.030
+
+Type  : Slow 1200mV 85C Model Setup 'hcsr04:UltrasonicR|M_end'
+Slack : -0.546
+TNS   : -3.433
+
+Type  : Slow 1200mV 85C Model Setup 'hcsr04:UltrasonicL|M_end'
+Slack : -0.538
+TNS   : -3.429
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.432
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'hcsr04:UltrasonicM|M_end'
+Slack : 0.453
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'hcsr04:UltrasonicL|M_end'
+Slack : 0.554
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'hcsr04:UltrasonicR|M_end'
+Slack : 0.578
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -490.736
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'hcsr04:UltrasonicM|M_end'
+Slack : -1.487
+TNS   : -53.532
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'hcsr04:UltrasonicL|M_end'
+Slack : -1.487
+TNS   : -11.896
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'hcsr04:UltrasonicR|M_end'
+Slack : -1.487
+TNS   : -11.896
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -7.628
+TNS   : -1658.956
+
+Type  : Slow 1200mV 0C Model Setup 'hcsr04:UltrasonicM|M_end'
+Slack : -2.597
+TNS   : -56.057
+
+Type  : Slow 1200mV 0C Model Setup 'hcsr04:UltrasonicR|M_end'
+Slack : -0.431
+TNS   : -2.479
+
+Type  : Slow 1200mV 0C Model Setup 'hcsr04:UltrasonicL|M_end'
+Slack : -0.426
+TNS   : -2.621
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.382
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'hcsr04:UltrasonicL|M_end'
+Slack : 0.398
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'hcsr04:UltrasonicM|M_end'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'hcsr04:UltrasonicR|M_end'
+Slack : 0.410
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -490.736
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'hcsr04:UltrasonicM|M_end'
+Slack : -1.487
+TNS   : -53.532
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'hcsr04:UltrasonicL|M_end'
+Slack : -1.487
+TNS   : -11.896
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'hcsr04:UltrasonicR|M_end'
+Slack : -1.487
+TNS   : -11.896
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -3.027
+TNS   : -594.817
+
+Type  : Fast 1200mV 0C Model Setup 'hcsr04:UltrasonicM|M_end'
+Slack : -0.665
+TNS   : -10.448
+
+Type  : Fast 1200mV 0C Model Setup 'hcsr04:UltrasonicL|M_end'
+Slack : 0.190
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'hcsr04:UltrasonicR|M_end'
+Slack : 0.204
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.178
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'hcsr04:UltrasonicM|M_end'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'hcsr04:UltrasonicL|M_end'
+Slack : 0.267
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'hcsr04:UltrasonicR|M_end'
+Slack : 0.275
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -354.260
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'hcsr04:UltrasonicM|M_end'
+Slack : -1.000
+TNS   : -36.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'hcsr04:UltrasonicL|M_end'
+Slack : -1.000
+TNS   : -8.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'hcsr04:UltrasonicR|M_end'
+Slack : -1.000
+TNS   : -8.000
+
+------------------------------------------------------------

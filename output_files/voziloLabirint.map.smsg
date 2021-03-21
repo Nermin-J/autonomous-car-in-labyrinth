@@ -1,0 +1,6 @@
+Warning (10268): Verilog HDL information at hcsr04.v(24): always construct contains both blocking and non-blocking assignments File: C:/Users/Nermin/Desktop/AutonomnoVoziloLabirint/hcsr04.v Line: 24
+Warning (10268): Verilog HDL information at PWM_generator.v(13): always construct contains both blocking and non-blocking assignments File: C:/Users/Nermin/Desktop/AutonomnoVoziloLabirint/PWM_generator.v Line: 13
+Warning (10268): Verilog HDL information at algoritamKretanja.v(99): always construct contains both blocking and non-blocking assignments File: C:/Users/Nermin/Desktop/AutonomnoVoziloLabirint/algoritamKretanja.v Line: 99
+Warning (10268): Verilog HDL information at algoritamKretanja.v(124): always construct contains both blocking and non-blocking assignments File: C:/Users/Nermin/Desktop/AutonomnoVoziloLabirint/algoritamKretanja.v Line: 124
+Warning (10268): Verilog HDL information at algoritamKretanja.v(305): always construct contains both blocking and non-blocking assignments File: C:/Users/Nermin/Desktop/AutonomnoVoziloLabirint/algoritamKretanja.v Line: 305
+Info (10281): Verilog HDL Declaration information at algoritamKretanja.v(29): object "pravo" differs only in case from object "PRAVO" in the same scope File: C:/Users/Nermin/Desktop/AutonomnoVoziloLabirint/algoritamKretanja.v Line: 29

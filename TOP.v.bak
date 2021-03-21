@@ -1,0 +1,85 @@
+module TOP
+(
+	input  		 clk			,
+	
+	input  		 echoDesni	,
+	input  		 echoLijevi	,
+	input  		 echoSrednji,
+	
+	output 		 trigDesni	,
+	output 		 trigLijevi	,
+	output 		 trigSrednji,
+	
+	output 		 Tx			,
+	output [3:0] motori
+);
+
+
+wire [ 7:0] podaci  ;
+wire 			enable  ;
+wire [20:0] USDesni ;
+wire [20:0] USLijevi;
+wire [20:0] USSrednji;
+wire 			endDesni ;
+wire 			endLijevi;
+wire 			endSrednji;
+wire [27:0]	duty;
+wire 			mjerenje;
+
+UART_Tx UART_Transmitter(
+   	.i_Clock(clk)        ,
+		.i_TX_DV(enable)     ,
+    	.i_TX_Byte(podaci)   ,
+		.o_TX_Serial(Tx)    	,
+		.o_TX_Done(TxDone)	
+);
+
+algoritamKretanja algoritamKretanja
+(
+	.clk(clk),
+	.USDesni(USDesni),
+	.USLijevi(USLijevi),
+	.USSrednji(USSrednji),
+	.TxEnable(enable),
+	.TxData(podaci),
+	.endDesni(endDesni),
+	.endLijevi(endLijevi),
+	.endSrednji(endSrednji),
+	.duty(duty),
+	.led(ledica)
+	);
+
+hcsr04 UltrasonicniDesni
+(
+	.clk(clk),
+	.echoPin(echoDesni),
+	.trigPin(trigDesni),
+	.udaljenost1(USDesni),
+	.M_end(endDesni)
+);
+
+hcsr04 UltrasonicniLijevi
+(
+	.clk(clk),
+	.echoPin(echoLijevi),
+	.trigPin(trigLijevi),
+	.udaljenost1(USLijevi),
+	.M_end(endLijevi)	
+);
+
+hcsr04 UltrasonicniSrednji
+(
+	.clk(clk),
+	.echoPin(echoSrednji),
+	.trigPin(trigSrednji),
+	.udaljenost1(USSrednji),
+	.M_end(endSrednji)
+);
+
+PWM_generator pwm
+(
+	.clk(clk),
+	.duty(duty),
+	.IN(motori)
+);
+endmodule
