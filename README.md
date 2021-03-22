@@ -11,8 +11,8 @@ The main parts of a robot are:
 Moving algorithm is implemented using FSM:
 ![image](https://user-images.githubusercontent.com/81052940/111932551-efb4fd00-8abd-11eb-9e6f-56c27fdcfe3f.png)
 
-Drivers for all components are done by Verilog implementation (no external microcontrollers).
+Drivers for all components done using Verilog (no external microcontrollers).
 All components of code are connected like this:
 ![image](https://user-images.githubusercontent.com/81052940/111932818-8e415e00-8abe-11eb-8fa4-dc4ed09eeaa1.png)
 
-Distance from middle sensor is sent over BT to the PC. Here we use Processing implementation given in  
+Distance from middle sensor is sent over BT to the PC. Here we use "Processing" implementation given in "pathDrawing" file. We read message sent over BT and make actions depending on the message (turning and moving).
