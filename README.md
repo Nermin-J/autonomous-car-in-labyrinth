@@ -9,6 +9,7 @@ The main parts of a robot are:
       - two on right and left to keep robot in the middle of the path
 
 Moving algorithm is implemented using FSM:
+
 ![image](https://user-images.githubusercontent.com/81052940/111932551-efb4fd00-8abd-11eb-9e6f-56c27fdcfe3f.png)
 
 Drivers for all components done using Verilog (no external microcontrollers).
