@@ -1,9 +1,18 @@
 # autonomous-car-in-labyrinth
 
-Main code is inside Folder "src" -> main.
+The main moving algorithm is set to FPGA. The FPGA project consists of different parts that are combined into one whole to form a complete algorithm and auxiliary modules.
 
-This is multi-threading (used CMSIS RTOS API) application with 4 periodical tasks:
-  1. task - reads the zero channel of the ADC with 30s period. The mean and variance of the last 20 samples are then calculated and sent in mailqueue in structure named "data".
-  2. task - reads the first channel of the ADC with 40s period. The mean and variance of the last 20 samples are then calculated and sent in mailqueue in structure named "data".
-  3. task - reads the second channel of the ADC with 50s period. The mean and variance of the last 20 samples are then calculated and sent in mailqueue in structure named "data".
-  4. task - used for communication. In the example, we just read data from mailqueue. In real app, these data can be sent to the supervisory computer over communication interface.
+The main parts of a robot are: 
+  1. two motors (whose speeds and direction are controlled by a PWM signal)
+  2. 3 ultrasonic sensors:
+      - one in the middle to measure distance from the wall in front 
+      - two on right and left to keep robot in the middle of the path
+
+Moving algorithm is implemented using FSM:
+![image](https://user-images.githubusercontent.com/81052940/111932551-efb4fd00-8abd-11eb-9e6f-56c27fdcfe3f.png)
+
+Drivers for all components are done by Verilog implementation (no external microcontrollers).
+All components of code are connected like this:
+![image](https://user-images.githubusercontent.com/81052940/111932818-8e415e00-8abe-11eb-8fa4-dc4ed09eeaa1.png)
+
+Distance from middle sensor is sent over BT to the PC. Here we use Processing implementation given in  
