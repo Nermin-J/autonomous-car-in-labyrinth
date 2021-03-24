@@ -1,5 +1,7 @@
 # autonomous-car-in-labyrinth
 
+Video link: https://youtu.be/Ii4fzLuS3eI
+
 The main motion algorithm is deployed to FPGA. The FPGA project consists of different parts that are combined into one whole to form a complete algorithm and auxiliary modules.
 
 The main parts of a robot are: 
